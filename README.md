@@ -20,14 +20,11 @@ Before you run the code, you need to install the necessary dependencies and set 
 The directory structure should look like this:
 
 ```
-bash
-CopyEdit
 /project-directory
     /templates
         index.html
     api.env
     flask.py
-
 ```
 
 ---
@@ -37,10 +34,7 @@ CopyEdit
 Install the required Python libraries by running:
 
 ```bash
-bash
-CopyEdit
 pip install flask requests python-dotenv beautifulsoup4
-
 ```
 
 ---
@@ -54,10 +48,7 @@ pip install flask requests python-dotenv beautifulsoup4
 Example `api.env`:
 
 ```
-ini
-CopyEdit
 GEMINI_API_KEY=your_actual_api_key
-
 ```
 
 ---
@@ -67,14 +58,11 @@ GEMINI_API_KEY=your_actual_api_key
 Make sure your project directory has the following structure:
 
 ```
-bash
-CopyEdit
 /project-directory
     /templates
         index.html
     api.env
     flask.py
-
 ```
 
 ---
@@ -84,20 +72,14 @@ CopyEdit
 In the `flask.py` file, ensure that the `load_dotenv()` function loads the correct path to the `api.env` file. Update it like this:
 
 ```python
-python
-CopyEdit
 load_dotenv(r'full_path_to_your_api.env')
 gemini_api_key = os.getenv("GEMINI_API_KEY")
-
 ```
 
 Example:
 
 ```python
-python
-CopyEdit
 load_dotenv(r'D:\Project\Code\Chatbot\api.env')
-
 ```
 
 ---
@@ -107,19 +89,13 @@ load_dotenv(r'D:\Project\Code\Chatbot\api.env')
 By default, the chatbot fetches content from:
 
 ```python
-python
-CopyEdit
 https://botpenguin.com/
-
 ```
 
 If you want the chatbot to answer based on a **different website**, simply update the `website_url` inside `flask.py`:
 
 ```python
-python
-CopyEdit
 website_url = "https://your-new-website.com/"
-
 ```
 
 > Note: Make sure the new website has accessible text content (like paragraphs and headings) so the bot can extract useful data.
@@ -133,19 +109,13 @@ website_url = "https://your-new-website.com/"
 - Run the Flask application:
 
 ```bash
-bash
-CopyEdit
 python flask.py
-
 ```
 
 - Open your browser and visit:
 
 ```
-cpp
-CopyEdit
 http://127.0.0.1:5000/
-
 ```
 
 ---
@@ -166,10 +136,7 @@ The chatbot will fetch website content, process it intelligently, and generate a
     - If you encounter module errors (`requests`, `flask`, `beautifulsoup4`, `python-dotenv`), install them again:
     
     ```bash
-    bash
-    CopyEdit
     pip install flask requests python-dotenv beautifulsoup4
-    
     ```
     
 - **Website Content Fetch Error**:
